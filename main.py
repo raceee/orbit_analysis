@@ -12,8 +12,9 @@ if the orbit of Qc2 is attracted to a 2 cycle then we plot c2, q1) and (c2, q2).
 import numpy as np
 import matplotlib.pyplot as plt
 
-interval_one = []
-lambda_interval_one = []
+
+interval_one = [0, 3.14]
+lambda_interval_one = [1, 3.14]
 interval_two = []
 lambda_interval_two = []
 interval_three = []
@@ -30,6 +31,7 @@ def fp_check(orbital):
     except:
         return False
 
+
 def two_cycle_check(orbital):
     "returns tuple"
     try:
@@ -40,6 +42,7 @@ def two_cycle_check(orbital):
             return False
     except:
         return False
+
 
 def vis(graph):
     fig = plt.figure()
@@ -71,15 +74,11 @@ def make_orbit(func, lambda_int, interval):
     vis(all_points)
 
 
-
 def func_one(l, x):
     return l * np.sin(x)
 
 
 if __name__ == "__main__":
-
-    range()
+    interval_one = list(range(interval_one[0], interval_one[1], 0.001))
+    lambda_interval_one = list(range(lambda_interval_one[0], lambda_interval_one[1], 0.001))
     make_orbit(func_one, lambda_int=lambda_interval_one, interval=interval_one)
-
-
-
