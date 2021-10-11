@@ -83,6 +83,7 @@ def make_orbit(func, lambda_int, interval):
     print("len of all points: ", len(all_points))
     vis(all_points)
 
+# TODO critial point of func lol
 
 def func_one(l, x):
     return l * np.sin(x) # maybe this 
